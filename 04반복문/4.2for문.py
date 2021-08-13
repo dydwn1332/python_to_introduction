@@ -92,6 +92,21 @@ for i in range(1, 10):
     print("%d" %i * i)
     print()
 
+#4-4 C4-3의 트리 모양을 변경하라!
+
 for i in range(9, 0, -1):
     print("%d" %i * i)
     print()
+
+#C4-5 for문으로 홀수의 개수를 카운트하라!
+
+number = input("숫자를 입력하시오 : ")
+
+total = 0
+
+for a in number:
+    a = int(a)
+    if a%2 != 0:
+        total = total + 1
+
+print("홀수의 개수 : %d." %total)

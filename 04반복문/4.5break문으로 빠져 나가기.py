@@ -22,18 +22,48 @@ while a <= 100:
 
 #C4-11 while문으로 영어 문장을 역순으로 출력하라!
 
-sentense = input("문장을 입력 하시오 : ")
+#sentense = input("문장을 입력 하시오 : ")
 
-print(sentense[2])
+#print(sentense[2])
 
-i = len(sentense) - 1
+#i = len(sentense) - 1
 
-print(i)
+#print(i)
 
-while i >= 0:
-    if sentense[i] == " ":
-        print("-", end="")
-    else:
-        print("%s" % sentense[i], end="")
+#while i >= 0:
+#    if sentense[i] == " ":
+#        print("-", end="")
+#    else:
+#        print("%s" % sentense[i], end="")
 
-        i = i - 1
+#        i = i - 1
+
+#심화문제
+count = 0
+i = 1
+while i <= 1000:
+    if i % 3 != 0:
+        print("%3d" %i, end=" ")
+        count = count + 1
+    if count % 10 == 0:
+        print()
+    i = i + 1
+
+print("\n\n")
+
+count = 0
+line = 0
+
+startnum = int(input("시작 수를 입력하시오 : "))
+endnum = int(input("끝 수를 입력하시오 : "))
+
+for i in range(startnum, endnum):
+    for nanu in range(1, i + 1):
+        if i % nanu == 0:
+            count = count + 1
+    if count == 2:
+        print("%4d" %i, end=" ")
+        line = line + 1
+        if line % 10 == 0:
+          print()
+    count = 0

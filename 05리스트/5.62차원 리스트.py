@@ -22,7 +22,7 @@ for i in range(len(data)):
 
 grade = [[60, 70, 80], [10, 20, 30], [40, 50, 50], [80, 90, 100], [10, 5, 10]]
 x = 0
-
+q = 0
 for i in range(len(grade)):
     for j in range(len(grade[i])):
         x = x + grade[i][j]
@@ -37,3 +37,31 @@ strings = [["원두커피", "라떼", "콜라"], ["우동", "국수", "피자", 
 for i in range(len(strings)):
     for j in range(len(strings[i])):
         print(strings[i][j])
+
+#C5-5 리시트로 영어 스펠링 퀴즈를 만들어라
+
+# questions = ["s_hool", "compu_er", "deco_ation", "windo_", "hi_tory"]
+# answers = ["c", "t", "r", "w", "s"]
+#
+# for i in range(len(questions)):
+#     answer = input("%s : 밑 줄에 들어갈 알파벳은? " %questions[i])
+#     if answer == answers[i]:
+#         print("정답입니다")
+#     else:
+#         print("오답입니다")
+
+#C5-6 리스트로 성적 합계와 평균을 구하라
+
+sum = 0
+while True:
+
+    grade = int(input("성적을 입력하시오(-1입력시 종료) : "))
+    if grade == -1:
+        break
+    sum = sum + grade
+    i = i + 1
+
+avg = sum / i
+print("합계 : %d, 평균 : %d" %(sum, avg))
+
+#5-7

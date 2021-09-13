@@ -19,7 +19,66 @@ def even_odd(n):
     else:
         print("%d는 홀수이다" %n)
 
-even_odd(int(input("숫자를 입력하시오 : ")))
+# even_odd(int(input("숫자를 입력하시오 : ")))
 
 #7.2.4 매개변수 *args
 
+def average(*args):
+    num = len(args)
+    sum = 0
+    for i in range(num):
+        sum = sum + args[i]
+    avg = sum / num
+    print("합계 : %d" %sum)
+    print("평균 : %d" %avg)
+
+average(10, 20, 30)
+
+#7.2.5매개변수에 리스트 전달하기
+
+def fruitss(food):
+    for i in food:
+        print(i)
+
+
+fruit = ["바나나", "딸기", "사과"]
+fruitss(fruit)
+
+
+def foodadd(food):
+    food.append("멜론")
+    food.append("수박")
+
+print(fruit)
+foodadd(fruit)
+print(fruit)
+
+#C7-1 두수의 합
+def add(a, b):
+    c = a + b
+    print("%d + %d = %d" %(a, b, c))
+
+add(10, 20)
+add(123, 412)
+
+#C7-2 두 정수 사이의 모든 수 합
+
+def alladd(first, last):
+    sum = 0
+    for i in range(first, last + 1):
+        sum = sum + i
+
+    print("%d ~ %d 의 합계 : %d" %(first, last, sum))
+
+alladd(1, 50)
+alladd(20, 50)
+
+#7-4 리스트값을 곱한 후 저장
+def listsave(list, a):
+    list2 = ""
+    for i in range(len(list)):
+        list2.append(int(list[i]) * a)
+
+    print(list2)
+result = [10, 20, 30, 40]
+listsave(result, 10)

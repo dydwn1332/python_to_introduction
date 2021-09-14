@@ -74,11 +74,19 @@ alladd(1, 50)
 alladd(20, 50)
 
 #7-4 리스트값을 곱한 후 저장
-def listsave(list, a):
-    list2 = ""
-    for i in range(len(list)):
-        list2.append(int(list[i]) * a)
+# def listsave(list1, a):
+#     list2 = list()
+#     for i in list1:
+#         b = i * a
+#         list2.append(b)
+#     list1 = list2
 
-    print(list2)
+def listsave(list1, a):
+    for i in range(len(list1)):
+        list1[i] = list1[i] * a
+
 result = [10, 20, 30, 40]
 listsave(result, 10)
+print(result)
+
+

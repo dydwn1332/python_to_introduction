@@ -26,3 +26,16 @@ a = "python is very easy"
 for i in a:
     print(i)
     print()
+
+#7-6함수로 배수의 합계를 구하라
+def sum(a):
+    sum1 = 0
+    for i in range(1, 101):
+        if i % a == 0:
+            # print("현재값 : %d" %sum1)
+            sum1 = sum1 + i
+            print("추가된 값 : %d, 합계 : %d" %(i, sum1))
+
+    print("총합 : %d" %sum1)
+
+sum(7)

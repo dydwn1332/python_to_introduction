@@ -7,7 +7,7 @@ for i in area_code:
 #6-2 딕셔너리로 성적 평균을 구하라
 sum = 0
 score = {"김": "50", "병": "20", "갑": "40", "을": "80", "정": "90"}
-for i in score:
+for i in score
     print("%s의 성적 : %s" %(i, score[i]))
     sum = sum + int(score[i])
 

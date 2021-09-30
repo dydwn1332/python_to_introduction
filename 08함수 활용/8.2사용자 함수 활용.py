@@ -85,4 +85,47 @@ def string_find(a, b):
 a = input("문장을 입력하시오 : ")
 b = input('찾을 단어를 입력하시오 : ')
 string_find(a, b)
-asd
+
+#8.2.6 다수의 문자열 치환하기
+def replace_word(string, word_list, word):
+    arr = string.split(" ")
+    new_arr = list()
+    for x in arr:
+        if x in word_list:
+            new_arr.append(word)
+        else:
+            new_arr.append(x)
+
+    result = " ".join(new_arr)
+    return result
+
+string = "python java php apple orange banana"
+word_list = list(["apple", "orange", "banana"])
+word = "fruit"
+print("문자열 : ", string)
+print("단어 리스트 : ", word_list)
+print("치환할 단어 : ", word)
+
+new_str = replace_word(string, word_list, word)
+print(new_str)
+
+#8.2.7 문자열 위치 이동시키기
+
+
+def string_move(string, away, movement):
+    if away == "left":
+        string1 = string[movement:]
+        string2 = string[0:movement]
+    else:
+        string1 = string[len(string) - movement:len(string)]
+        string2 = string[movement:]
+
+    result = string1 + string2
+    return result
+
+string = "helloworld"
+away = "left"
+movement = 3
+print(string_move(string, away, movement))
+
+#hel loworld

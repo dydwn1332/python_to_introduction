@@ -85,3 +85,4 @@ def string_find(a, b):
 a = input("문장을 입력하시오 : ")
 b = input('찾을 단어를 입력하시오 : ')
 string_find(a, b)
+asd

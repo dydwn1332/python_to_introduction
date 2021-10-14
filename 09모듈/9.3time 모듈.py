@@ -39,3 +39,20 @@ print(string)
 tm = time.localtime(time.time())
 string = time.strftime("%Y-%m-%d %I:%M:%S %p", tm)
 print(string)
+
+#9.3.4 시간 지연시키기
+print("시작?")
+# time.sleep(5)
+print("5초 후에 나타남")
+
+#9.3.5 프로그램 실행 시간 측정하기
+def func():
+    sum = 0
+    for i in range(1, 10000000):
+        sum = sum + i
+        # print(sum)
+start = time.time()
+func()
+end = time.time()
+
+print("소요시간 :", end - start)

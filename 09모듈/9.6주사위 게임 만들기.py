@@ -48,3 +48,40 @@ while A == 'y':
         break
 
 print("게임이 종료되었습니다.")
+
+#심화 문제
+#리스트 x와 random 모듈의 choice()함수를 이용하여 다음의 실행 결과를
+#가져오는 가위바위보 프로그램을 작성해 보시오.
+
+x = ["가위", "바위", "보"]
+
+print("=" * 50)
+print("가위바위보 게임")
+print("=" * 50)
+
+me = random.choice(x)
+computer = random.choice(x)
+
+a = "y"
+while a == "y":
+    me = random.choice(x)
+    computer = random.choice(x)
+    print("나 : %s" %me)
+    print("컴퓨터 : %s" %computer)
+    if me == computer:
+        print("무승부입니다.")
+    elif me == "가위" and computer == "바위":
+        print("졌습니다.")
+    elif me == "가위" and computer == "보":
+        print("이겼습니다.")
+    elif me == "바위" and computer == "가위":
+        print("이겼습니다.")
+    elif me == "바위" and computer == "보":
+        print("졌습니다.")
+    elif me == "보" and computer == "가위":
+        print("졌습니다.")
+    elif me == "보" and computer == "바위":
+        print("이겼습니다.")
+
+    print("=" * 50)
+    a = input("계속하시겠습니까?(y/n)")
